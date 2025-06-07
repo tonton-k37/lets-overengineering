@@ -1,4 +1,5 @@
 import express, { Express, Request, Response } from "express";
+import { greeting } from "./simple/controllers";
 const port = 8000;
 
 const app: Express = express();
@@ -6,6 +7,9 @@ const app: Express = express();
 app.get("/", (req: Request, res: Response) => {
   res.send("hello world");
 })
+
+// simple exapmle of hello the fucking world
+app.get("/sample", greeting.index);
 
 app.get("/simple", (req, res) => {
   res.send("simple");
