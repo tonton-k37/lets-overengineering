@@ -1,0 +1,19 @@
+{
+  "name": "lets-overengineering",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonton-k37/lets-overengineering.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonton-k37/lets-overengineering/issues"
+  },
+  "homepage": "https://github.com/tonton-k37/lets-overengineering#readme"
+}
