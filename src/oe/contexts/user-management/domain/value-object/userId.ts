@@ -13,6 +13,11 @@ export class UserId {
     return this._value
   }
 
+  // do we need this method? no, we don't but it's in the book!!!
+  equals(other: UserId) {
+    return this._value === other.value;
+  }
+
   validate() {
     if (typeof this._value !== 'string') {
       throw new InvalidValueError("oops, you stupid. it's not the proper user id moron");
