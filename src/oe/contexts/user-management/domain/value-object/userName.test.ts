@@ -1,3 +1,5 @@
 // contexts/user-management/domain/value-object/userName.test.ts
 
-// TODO: implement this module
+describe("UserName", () => {
+  it.todo("write me one day")
+})
