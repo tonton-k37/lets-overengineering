@@ -174,7 +174,7 @@ If you’ve ever been on a team where complexity is celebrated, where abstractio
 
 > “there is no such word over engineering. you think it's over engineering?. it's because of you only have exprericens of small services”
 
->  “Can you write everything from scratch?”
+>  “Can you write everything from scratch?”  
 >  “I cannot. But I have confidence in myself. give me a month or I will sue you”    
 ---
 
