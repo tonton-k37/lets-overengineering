@@ -172,6 +172,9 @@ If you’ve ever been on a team where complexity is celebrated, where abstractio
 
 > “whethere the architecture fits to the what we do is not the point. if the architecture is not in the book is not the architecture”  
 
-> “there is no such word over engineering. you think it's over engineering?. it's because of you only have exprericens of small services”  
+> “there is no such word over engineering. you think it's over engineering?. it's because of you only have exprericens of small services”
+
+>  “Can you write everything from scratch?”
+>  “I cannot. But I have confidence in myself. give me a month or I will sue you”    
 ---
 
