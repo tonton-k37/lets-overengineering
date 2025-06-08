@@ -9,6 +9,14 @@ export class UserName {
     this._value = value;
   }
 
+  equals(other: UserName) {
+    return this._value === other.value;
+  }
+
+  get value() {
+    return this._value;
+  }
+
   validate() {
     if (typeof this._value !== "string") {
       throw new InvalidValueError("you don't know the name?");
