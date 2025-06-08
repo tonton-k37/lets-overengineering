@@ -166,4 +166,15 @@ src/
 
 If you’ve ever been on a team where complexity is celebrated, where abstraction is power, and where _thinking is outsourced to books_—you’ll feel right at home here.
 
+
+> “How do you achieve is not the goal”  
+> “No. How we achieve is the goal. Business goal? fuck that”  
+
+> “whethere the architecture fits to the what we do is not the point. if the architecture is not in the book is not the architecture”  
+
+> “there is no such word over engineering. you think it's over engineering?. it's because of you only have exprericens of small services”
+
+>  “Can you write everything from scratch?”  
+>  “I cannot. But I have confidence in myself. give me a month or I will sue you”    
 ---
+
