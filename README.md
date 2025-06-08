@@ -44,60 +44,93 @@ This repo is for them.
 ## 🧱 Architecture Overview (50+ files for one PATCH)
 
 Here’s what it takes to change a single user’s name:
-
 src/
-├── controllers/
-│ └── ChangeUserNameController.ts
-├── routes/
-│ └── userRoutes.ts
-├── request-dto/
-│ └── ChangeUserNameRequest.ts
-├── response-dto/
-│ └── ChangeUserNameResponse.ts
-├── commands/
-│ ├── ChangeUserNameCommand.ts
-│ └── ChangeUserNameCommandMapper.ts
-├── usecases/
-│ └── ChangeUserNameUseCase.ts
-├── input-ports/
-│ └── IChangeUserNameInputPort.ts
-├── output-ports/
-│ └── IChangeUserNameOutputPort.ts
 ├── application/
-│ └── UserApplicationService.ts
+│ ├── command/
+│ │ ├── changeUserNameCommand.ts
+│ │ ├── changeUserNameCommand.test.ts
+│ │ ├── changeUserNameCommandMapper.ts
+│ │ └── changeUserNameCommandMapper.test.ts
+│ ├── usecase/
+│ │ ├── changeUserNameUseCase.ts
+│ │ └── changeUserNameUseCase.test.ts
+│ ├── input-port/
+│ │ └── changeUserNameInputPort.ts
+│ ├── output-port/
+│ │ └── changeUserNameOutputPort.ts
+│ ├── service/
+│ │ ├── userApplicationService.ts
+│ │ └── userApplicationService.test.ts
+
 ├── domain/
-│ ├── entities/
-│ │ └── User.ts
-│ ├── value-objects/
-│ │ ├── UserId.ts
-│ │ └── UserName.ts
-│ ├── repositories/
-│ │ └── IUserRepository.ts
-│ ├── services/
-│ │ └── UserDomainService.ts
-│ ├── policies/
-│ │ └── UserNameChangePolicy.ts
-│ └── specifications/
-│ └── UserNameSpecification.ts
+│ ├── aggregate/
+│ │ ├── userAggregate.ts
+│ │ └── userAggregate.test.ts
+│ ├── entity/
+│ │ ├── user.ts
+│ │ └── user.test.ts
+│ ├── value-object/
+│ │ ├── userId.ts
+│ │ ├── userId.test.ts
+│ │ ├── userName.ts
+│ │ └── userName.test.ts
+│ ├── policy/
+│ │ ├── namePolicy.ts
+│ │ └── namePolicy.test.ts
+│ ├── specification/
+│ │ ├── userNameSpecification.ts
+│ │ └── userNameSpecification.test.ts
+│ ├── service/
+│ │ ├── userDomainService.ts
+│ │ └── userDomainService.test.ts
+│ ├── event/
+│ │ ├── userNameChangedEvent.ts
+│ │ ├── userNameChangedEvent.test.ts
+│ │ ├── domainEventDispatcher.ts
+│ │ └── domainEventDispatcher.test.ts
+│ ├── repository/
+│ │ ├── userRepository.ts
+│ │ └── userRepository.test.ts
+
 ├── infrastructure/
-│ └── repositories/
-│ └── UserRepositoryImpl.ts
-├── presenters/
-│ └── ChangeUserNamePresenter.ts
-├── events/
-│ ├── UserNameChangedEvent.ts
-│ └── DomainEventDispatcher.ts
-├── loggers/
-│ └── ConsoleLogger.ts
-├── exceptions/
-│ └── ExceptionMapper.ts
-├── tests/
-│ ├── controllers/
-│ ├── usecases/
-│ ├── entities/
-│ ├── presenters/
-│ ├── repositories/
-│ └── integrations/
+│ └── repository/
+│ ├── userRepositoryImpl.ts
+│ └── userRepositoryImpl.test.ts
+
+├── interface-adapter/
+│ ├── controller/
+│ │ ├── changeUserNameController.ts
+│ │ └── changeUserNameController.test.ts
+│ ├── presenter/
+│ │ ├── changeUserNamePresenter.ts
+│ │ └── changeUserNamePresenter.test.ts
+│ ├── dto/
+│ │ ├── changeUserNameRequest.dto.ts
+│ │ ├── changeUserNameResponse.dto.ts
+│ │ └── changeUserNameRequest.dto.test.ts
+│ ├── router/
+│ │ ├── userRouter.ts
+│ │ └── userRouter.test.ts
+│ ├── validator/
+│ │ ├── changeUserNameRequestValidator.ts
+│ │ └── changeUserNameRequestValidator.test.ts
+│ └── middleware/
+│ ├── exceptionHandler.ts
+│ └── exceptionHandler.test.ts
+
+├── shared/
+│ ├── exception/
+│ │ ├── userAlreadyExists.error.ts
+│ │ ├── invalidUserName.error.ts
+│ │ └── exceptionMapper.test.ts
+│ ├── logger/
+│ │ ├── consoleLogger.ts
+│ │ └── consoleLogger.test.ts
+│ └── types/
+│ └── http.ts
+
+├── main.ts
+└── app.ts
 
 > Yes, every layer is fully test-covered.  
 > Because what is architecture, if not _bureaucracy with 100% test coverage_?
