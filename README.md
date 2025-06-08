@@ -43,7 +43,11 @@ This repo is for them.
 
 ## 🧱 Architecture Overview (50+ files for one PATCH)
 
+---
+
 Here’s what it takes to change a single user’s name:
+
+```text
 src/
 ├── application/
 │ ├── command/
@@ -131,11 +135,10 @@ src/
 
 ├── main.ts
 └── app.ts
+```
 
 > Yes, every layer is fully test-covered.  
 > Because what is architecture, if not _bureaucracy with 100% test coverage_?
-
----
 
 ## 🧠 What You'll Learn (Ironically)
 
