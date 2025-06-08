@@ -5,7 +5,7 @@ import { UserName } from "../value-object/userName";
 
 export class User {
   private readonly _id: UserId;
-  private readonly _name: UserName;
+  private _name: UserName;
 
   constructor({
     id,
@@ -24,5 +24,10 @@ export class User {
 
   get name() {
     return this._name;
+  }
+
+  changeName(newName: UserName) {
+    if (this._name.equals(newName)) return;
+    this._name = newName;
   }
 }
