@@ -1,6 +1,6 @@
 // contexts/user-management/domain/value-object/userId.ts
 
-import { InvalidValueError } from "../../../shared/domain/value-objects/errors/InvalidValueError";
+import { InvalidValueError } from "../../../shared/exceptions/InvalidValueError";
 
 export class UserId {
   private readonly _value: string;

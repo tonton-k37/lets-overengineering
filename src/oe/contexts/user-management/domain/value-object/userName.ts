@@ -1,6 +1,6 @@
 // contexts/user-management/domain/value-object/userName.ts
 
-import { InvalidValueError } from "../../../shared/domain/value-objects/errors/InvalidValueError";
+import { InvalidValueError } from "../../../shared/exceptions/InvalidValueError";
 
 export class UserName {
   private readonly _value: string;
